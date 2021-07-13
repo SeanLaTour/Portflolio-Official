@@ -4,6 +4,8 @@ import { Spring } from "react-spring/renderprops";
 import flashItGIF from "./flash-It-GIF.gif";
 import pomodoroGIF from "./pomodoroGIF.gif";
 import firstProfileGIF from "./firstProfileGIF.gif";
+import reservationGIF from "./reservation.gif";
+import mirrorGIF from "./mirror.gif";
 import slugs from "./slugs.jpg";
 
 function Apps() {
@@ -33,6 +35,18 @@ function Apps() {
       It's important to know the foundations of web development and this project illustrates my understanding and application of foundational concepts.`,
       img: firstProfileGIF,
     },
+    {
+      name: "Periodic Tables",
+      description:
+        "The restaurant reservation app 'Periodic Tables' is a full-stack project utilizing React, Bootstrap, Node, Knex and PostreSQL. It illustrates my proficiency with the full developement cycle and how the front and back-end apps interact with one another.",
+      img: reservationGIF,
+    },
+    {
+      name: "Magic Mirror",
+      description:
+        "The Magic Mirror is a full-stack project I designed for personal use inside my home. It makes use of React, Bootstarp, Node, Knex and PostgreSQL in order to display information that is important to me and my locaton, ranging from the weather and sunset to my personal schedule which is updated via a mobile platform.",
+      img: mirrorGIF,
+    },
   ];
 
   function handleButton(id) {
@@ -46,37 +60,60 @@ function Apps() {
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
           <div style={props}>
-            <Row>
+            <Row className="App-row">
               <Col xs={1}></Col>
               <Col className="mt-4" xs={3}>
                 <div
-                  className=" d-flex justify-content-center flex-column"
+                  className="selector"
                   style={{
-                    height: "600px",
                     backgroundColor: "rgb(0, 0, 0, .7)",
                     borderColor: "#000",
                     borderStyle: "solid",
                     borderWidth: "6px",
                   }}
                 >
-                  <Button className="p-3 m-3" variant="success" onClick={() => handleButton(0)}>
+                  <Button
+                    className="p-3 m-3"
+                    variant="success"
+                    onClick={() => handleButton(3)}
+                  >
+                    Periodic Tables
+                  </Button>
+                  <Button
+                    className="p-3 m-3"
+                    variant="success"
+                    onClick={() => handleButton(0)}
+                  >
                     Flashcard App
                   </Button>
-                  <Button className="p-3 m-3" variant="success" onClick={() => handleButton(1)}>
+                  <Button
+                    className="p-3 m-3"
+                    variant="success"
+                    onClick={() => handleButton(4)}
+                  >
+                    Magic Mirror
+                  </Button>
+                  <Button
+                    className="p-3 m-3"
+                    variant="success"
+                    onClick={() => handleButton(1)}
+                  >
                     Pomodoro Timer
                   </Button>
-                  <Button className="p-3 m-3" variant="success" onClick={() => handleButton(2)}>
+                  <Button
+                    className="p-3 m-3"
+                    variant="success"
+                    onClick={() => handleButton(2)}
+                  >
                     First Profile
                   </Button>
                 </div>
               </Col>
 
-              <Col className="mt-4" xs={8}>
+              <Col xs={8}>
                 <div
-                  className="d-flex justify-content-center ml-5"
+                  className="display"
                   style={{
-                    width: "800px",
-                    height: "600px",
                     backgroundColor: "rgb(0, 0, 0, .7)",
                     borderColor: "#000",
                     borderStyle: "solid",
@@ -86,10 +123,10 @@ function Apps() {
                   <div className="d-flex justify-content-around flex-column p-5">
                     <h2>{name}</h2>
                     <img
-                      className="m-5"
+                      className="display-image"
                       style={{
-                        width: "600px",
-                        height: "290px",
+                        height: "100%",
+                        width: "100%",
                         borderColor: "#000",
                         borderStyle: "solid",
                         borderWidth: "6px",

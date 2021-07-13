@@ -38,9 +38,10 @@ function Contact() {
                 }}
               >
                 <h2>Contact Me:</h2>
+                <a style={{color: 'green'}} href="https://www.linkedin.com/in/seanlatour/">LinkedIn</a> <a style={{color: 'green'}} href="https://github.com/SeanLaTour">Github</a>
                 <p>
-                  Feel free to write me an email! I try and check it as often
-                  as possible so I should be able to get back to you ASAP!
+                  Feel free to write me an email. I try and check it as often
+                  as possible so I should be able to get back to you ASAP.
                 </p>
                 <form className="contact-form" onSubmit={sendEmail}>
                   <div className="form-group">

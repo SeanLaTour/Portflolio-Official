@@ -1,35 +1,192 @@
 body {
-	background: url(./cherryBack.png), linear-gradient(-45deg, #1d015f, #c9058e, #23a6d5, #23d5ab, #27e667, #48018a);
-	background-size: 200% 300%;
-	background-repeat: no-repeat;
-	animation: gradient 50s ease infinite;
-	background-image: "portolio4.png";
+  background: linear-gradient(
+    -45deg,
+    #1d015f,
+    #c9058e,
+    #23a6d5,
+    #23d5ab,
+    #27e667,
+    #48018a
+  );
+  background-size: 200% 300%;
+  background-repeat: no-repeat;
+  animation: gradient 50s ease infinite;
+  background-image: "portolio4.png";
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-h1, h2, h3, p {
-    font-family: 'revert';
-    color:#cacaca;
+h1,
+h2,
+h3,
+p,
+li,
+label {
+  font-family: "revert";
+  color: #cacaca;
 }
 
 footer {
-	display: none;
+  display: none;
+}
+
+select {
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-wrap: break-word;
+  width: 90%;
+}
+
+li {
+  margin: 5px;
+  white-space: nowrap;
+}
+
+/* About Section */
+.about-A {
+  flex-direction: column;
+}
+
+.about-B {
+  flex-direction: column;
+  height: auto;
+}
+
+.about-image-A {
+  width: 100%;
+  border-bottom-style: solid;
+  border-color: "#000";
+  border-width: "6px";
+}
+
+.about-image-B {
+  width: 100%;
+  border-bottom-style: solid;
+  border-color: "#000";
+  border-width: "6px";
+}
+
+.formSelect {
+  margin-bottom: 15px;
+}
+
+/* Apps Section */
+.display {
+  width: 300px;
+  height: 600px;
+  background-color: "rgb(0, 0, 0, .7)";
+  border-color: "#000";
+  border-style: "solid";
+  border-width: "6px";
+  margin-top: 25px;
+}
+
+.App-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.selector {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
 }
 
 @media screen and (min-width: 800px) {
-	footer {
-		display: flex;
-		justify-content: center;
-	}
+  body {
+    background: url(./cherryBack.png),
+      linear-gradient(
+        -45deg,
+        #1d015f,
+        #c9058e,
+        #23a6d5,
+        #23d5ab,
+        #27e667,
+        #48018a
+      );
+    background-size: 200% 300%;
+    background-repeat: no-repeat;
+    animation: gradient 50s ease infinite;
+    background-image: "portolio4.png";
   }
+
+  /* About Section */
+  .about-A {
+    flex-direction: row;
+  }
+
+  .formSelect {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .about-B {
+    flex-direction: column;
+    height: 270px;
+  }
+
+  .about-image-A {
+    width: 200px;
+    border-right-style: solid;
+    border-color: "#000";
+    border-width: "6px";
+  }
+
+  .about-image-B {
+    width: 200px;
+    border-left-style: solid;
+    border-color: "#000";
+    border-width: "6px";
+  }
+
+  /* Apps Section */
+  .display {
+    width: 800px;
+    height: 600px;
+    background-color: "rgb(0, 0, 0, .7)";
+    border-color: "#000";
+    border-style: "solid";
+    border-width: "6px";
+  }
+
+  .App-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .selector {
+    height: 600px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+}

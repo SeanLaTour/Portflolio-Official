@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet'
 import Header from "./Header";
 import { Switch, Route } from "react-router";
 import Home from "./HomePage/Home";
@@ -10,6 +11,9 @@ import Contact from "./Contact/Contact";
 function App() {
   return (
     <>
+    <Helmet>
+          <title>{ "Sean La Tourette" }</title>
+        </Helmet>
     <Header />
       <Switch>
         <Route exact path="/">
